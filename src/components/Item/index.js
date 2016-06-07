@@ -1,15 +1,12 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
-const Item = ({ children, className }) => (
+type Props = {
+  className?: string,
+  children?: any
+}
+
+export default ({ children, className }: Props) => (
   <div className={className}>
     {children}
   </div>
 );
-
-Item.propTypes = {
-  children: PropTypes.any,
-  className: PropTypes.string,
-};
-
-
-export default Item;

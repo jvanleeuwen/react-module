@@ -1,14 +1,14 @@
-import React, { PropTypes } from 'react';
+/* @flow */
 
-const Container = ({ children, className }) => (
+import React from 'react';
+
+type Props = {
+  className?: string,
+  children?: any
+}
+
+export default ({ children, className }: Props) => (
   <div className={className}>
     {children}
   </div>
 );
-
-Container.propTypes = {
-  children: PropTypes.any,
-  className: PropTypes.string,
-};
-
-export default Container;
