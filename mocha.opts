@@ -1,0 +1,5 @@
+./src/**/__tests__/*.js
+--compilers js:babel-core/register
+--require babel-polyfill
+--require ./mocha.setup
+--recursive
