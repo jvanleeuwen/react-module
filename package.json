@@ -9,7 +9,7 @@
     "test": "./node_modules/.bin/mocha --opts mocha.opts --watch",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --opts mocha.opts",
     "lint": "./node_modules/.bin/eslint src/",
-    "build": "./node_modules/.bin/cross-env BABEL_ENV=commonjs ./node_modules/.bin/babel src --out-dir lib"
+    "build": "./node_modules/.bin/cross-env BABEL_ENV=commonjs NODE_ENV=production ./node_modules/.bin/babel src --out-dir lib"
   },
   "author": "",
   "license": "UNLICENSED",
