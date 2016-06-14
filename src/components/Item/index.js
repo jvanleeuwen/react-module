@@ -1,4 +1,8 @@
+/* @flow */
+
 import React from 'react';
+
+import styles from './style.css';
 
 type Props = {
   className?: string,
@@ -6,7 +10,7 @@ type Props = {
 }
 
 export default ({ children, className }: Props) => (
-  <div className={className}>
+  <div className={[className, styles.item].join(' ')}>
     {children}
   </div>
 );
