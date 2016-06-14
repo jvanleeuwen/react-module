@@ -1,5 +1,5 @@
 ./src/**/__tests__/*.js
 --compilers js:babel-core/register
---require babel-polyfill
+--require ignore-styles
 --require ./mocha.setup
 --recursive
