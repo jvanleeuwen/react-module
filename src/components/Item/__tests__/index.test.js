@@ -1,10 +1,21 @@
 import React from 'react';
+import { renderToString } from 'react-dom/server';
 import { shallow } from 'enzyme';
 import { expect } from 'chai';
 
 import Item from './../';
 
 describe('<Item />', () => {
+  it('renders on server', () => {
+    const wrapper = (
+      <Item>
+        <div className="unique" />
+      </Item>
+    );
+
+    expect(() => renderToString(wrapper)).to.not.throw(ReferenceError);
+  });
+
   it('renders children when passed in', () => {
     const wrapper = shallow(
       <Item>
