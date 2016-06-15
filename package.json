@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "description": "React Module",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib coverage",
     "test": "./node_modules/.bin/mocha --opts mocha.opts",

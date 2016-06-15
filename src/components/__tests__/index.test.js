@@ -3,14 +3,14 @@ import { renderToString } from 'react-dom/server';
 import { shallow } from 'enzyme';
 import { expect } from 'chai';
 
-import Item from './../';
+import Component from './../';
 
-describe('<Item />', () => {
+describe('<Component />', () => {
   it('renders on server', () => {
     const wrapper = (
-      <Item>
+      <Component>
         <div className="unique" />
-      </Item>
+      </Component>
     );
 
     expect(() => renderToString(wrapper)).to.not.throw(ReferenceError);
@@ -18,16 +18,16 @@ describe('<Item />', () => {
 
   it('renders children when passed in', () => {
     const wrapper = shallow(
-      <Item>
+      <Component>
         <div className="unique" />
-      </Item>
+      </Component>
     );
     expect(wrapper.contains(<div className="unique" />)).to.equal(true);
   });
 
   it('adds className when passed in', () => {
     const wrapper = shallow(
-      <Item className="test" />
+      <Component className="test" />
     );
 
     expect(wrapper).to.have.className('test');
