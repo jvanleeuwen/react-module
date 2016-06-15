@@ -38,7 +38,7 @@ module.exports = {
 
   resolve: {
     alias: {
-      'react-module': path.resolve(__dirname, './../src/components'),
+      'react-module': path.resolve(__dirname, './../src/'),
     },
   },
 
