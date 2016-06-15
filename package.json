@@ -10,7 +10,8 @@
     "test:tdd": "./node_modules/.bin/mocha --opts mocha.opts --watch",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --opts mocha.opts",
     "lint": "./node_modules/.bin/eslint src/ && ./node_modules/.bin/stylelint \"src/**/*.css\"",
-    "build": "./node_modules/.bin/cross-env BABEL_ENV=commonjs NODE_ENV=production ./node_modules/.bin/babel ./src --out-dir ./lib --ignore **/*.test.js"
+    "build": "./node_modules/.bin/cross-env BABEL_ENV=commonjs NODE_ENV=production ./node_modules/.bin/babel ./src --out-dir ./lib --ignore **/*.test.js",
+    "prepublish": "npm run clean && npm run build"
   },
   "author": "",
   "license": "UNLICENSED",
