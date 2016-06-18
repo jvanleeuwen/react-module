@@ -5,5 +5,9 @@
     "browser": true,
     "mocha": true,
     "node": true
+  },
+  "ecmaFeatures": {
+    "jsx": true,
+    "classses": true.
   }
 }
